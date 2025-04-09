@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cárdapio Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Cárdapio Digital</h1>
+    <div id="cardapio">
+        <div class="categoria">
+            <h2>Combos</h2>
+            <div class="item">
+                <input type="checkbox" id="combo-california" value="combo-california" data-nome="Combo Cálifornia" data-preco="38.00">
+                <div class="item-info">
+                    <div class="item-nome">Combo Califórnia</div>
+                    <div class="item-descricao">Pão, blend 150g, cheddar, cream cheese, bacon caramelizado com abacaxi, anéis de cebola. Acompanha batata + Refrigerante</div>
+                    <div class="item-preco">R$ 38.00</div>
+                </div>
+                <div class="quantidade-controle oculto" data-item="combo-california">
+                    <button onclick="atualizarQuantidade('combo-california, -1')">-</button>
+                    <span id="qtd-combo-california">0</span>
+                    <button onclick="atualizarQuantidade('combo-california', 1)">+</button>
+                </div>
+            </div>
+            <div class="item">
+                <input type="checkbox" id="combo-xsalada" value="combo-xsalada" data-nome="Combo X-salada" data-preco="31.00">
+                <div class="item-info">
+                    <div class="item-nome">Combo X-salada</div>
+                    <div class="item-descricao">Pão, blend 150g, cheddar, alface, tomate, cebola, maionese verde. Acompanha batata + refri.</div>
+                    <div class="item-preco">R$ 31,00</div>
+                </div>
+                <div class="quantidade-controle oculto" data-item="combo-xsalada">
+                    <button onclick="atualizarQuantidade('combo-xsalada', -1)">-</button>
+                    <span id="qtd-combo-xsalada">0</span>
+                    <button onclick="atualizarQuantidade('combo-xsalada', 1)">+</button>
+                </div>
+        </div>
+
+        <div class="categoria">
+            <h2>Hambúrgueres</h2>
+            <div class="item">
+                <input type="checkbox" id="x-salada" value="x-salada" data-nome="X-salada" data-preco="22.00">
+                <div class="item-info">
+                    <div class="item-nome">X-salada</div>
+                    <div class="item-descricao">Pão, blend 150g, cheddar, alface, tomate, cebola e maionese verde.</div>
+                    <div class="item-preco">R$ 22,00</div>
+                </div>
+                <div class="quantidade-controle oculto" data-item="x-salada">
+                    <button onclick="atualizarQuantidade('x-salada', -1)">-</button>
+                    <span id="qtd-x-salada">0</span>
+                    <button onclick="atualizarQuantidade('x-salada', 1)">+</button>
+                </div>
+            </div>   
+        <div class="item">
+            <input type="checkbox" id="super-cheddar" value="super-cheddar" data-nome="Super Cheddar" data-preco="27.00">
+            <div class="item-info">
+                <div class="item-nome">Super Cheddar</div>
+                <div class="item-descricao">Pão, blend 150g, cheddar, cheddar cremoso, barbecue e bacon.</div>
+                <div class="item-preco">R$ 27,00</div>
+            </div>
+            <div class="quantidade-controle oculto" data-item="super-cheddar">
+                <button onclick="atualizarQuantidade('super-cheddar', -1)">-</button>
+                <span id="qtd-super-cheddar">0</span>
+                <button onclick="atualizarQuantidade('super-cheddar', 1)">+</button>
+            </div>
+        </div>
+        </div>
+        <div class="item">
+
+            <input type="checkbox" id="canarinho-burguer" value="canarinho-burguer" data-nome="Canarinho-Burguer" data-preco="29.00">
+
+            <div class="item-info">
+
+                <div class="item-nome">Canarinho Burguer</div>
+
+                <div class="item-descricao">Pão de hambúrguer, blend bovino de 150g, fatia de queijo cheddar, costela desfiada, cebola caramelizada, maionese, mostarda, cream cheese, milho e cebolinha.</div>
+
+                <div class="item-preco">R$ 29,00</div>
+
+            </div>
+
+            <div class="quantidade-controle oculto" data-item="canarinho-burguer">
+
+                <button onclick="atualizarQuantidade('canarinho-burguer', -1)">-</button>
+
+                <span id="qtd-canarinho-burguer">0</span>
+
+                <button onclick="atualizarQuantidade('canarinho-burguer', 1)">+</button>
+
+            </div>
+        </div>
+        <div class="item">
+
+            <input type="checkbox" id="california" value="california" data-nome="California" data-preco="29.00">
+
+            <div class="item-info">
+
+                <div class="item-nome">Califórnia</div>
+
+                <div class="item-descricao">Pão de hambúrguer, blend 150g, queijo cheddar, cream cheese, bacon caramelizado com abacaxi, anéis de cebola empanados.</div>
+
+                <div class="item-preco">R$ 29,00</div>
+
+            </div>
+
+            <div class="quantidade-controle oculto" data-item="california">
+
+                <button onclick="atualizarQuantidade('california', -1)">-</button>
+
+                <span id="qtd-california">0</span>
+
+                <button onclick="atualizarQuantidade('california', 1)">+</button>
+
+            </div>
+        </div>
+        <div class="item">
+
+            <input type="checkbox" id="camarada" value="camarada" data-nome="Camarada" data-preco="34.00">
+
+            <div class="item-info">
+
+                <div class="item-nome">Camarada</div>
+
+                <div class="item-descricao">Pão de hambúrguer, blend bovino 90g, queijo prato, cream cheese, camarões salteados, molho tare e molho especial de alho.</div>
+
+                <div class="item-preco">R$ 34,00</div>
+
+            </div>
+
+            <div class="quantidade-controle oculto" data-item="camarada">
+
+                <button onclick="atualizarQuantidade('camarada', -1)">-</button>
+
+                <span id="qtd-camarada">0</span>
+
+                <button onclick="atualizarQuantidade('camarada', 1)">+</button>
+
+            </div>
+        </div>
+        <div class="item">
+
+            <input type="checkbox" id="picanha-burguer" value="picanha-burguer" data-nome="Picanha-Burguer" data-preco="34.00">
+
+            <div class="item-info">
+
+                <div class="item-nome">Picanha-Burguer</div>
+
+                <div class="item-descricao">Pão de hambúrguer, carne 90g, fatia de queijo prato, cheddar, pedaços de picanha, barbecue e anéis de cebola.</div>
+
+                <div class="item-preco">R$ 30,00</div>
+
+            </div>
+
+            <div class="quantidade-controle oculto" data-item="picanha-burguer">
+
+                <button onclick="atualizarQuantidade('picanha-burguer', -1)">-</button>
+
+                <span id="qtd-picanha-burguer">0</span>
+
+                <button onclick="atualizarQuantidade('picanha-burguer', 1)">+</button>
+
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
